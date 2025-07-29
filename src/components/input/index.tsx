@@ -4,7 +4,6 @@ export function Input({ type, placeholder, required, ...rest }: React.InputHTMLA
   return (
     <input
       type={type}
-      // className={styles.input}
       className='input'
       placeholder={placeholder}
       required={required}

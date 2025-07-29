@@ -3,14 +3,14 @@ export interface TecnologiaProps {
   stack: string,
   paragraph: string,
   icon: "RiNextjsLine" | "SiReact" | "TbBrandJavascript" | "RiTailwindCssFill" | "BiLogoSass" | "FaNodeJs",
-  anosExp: string,
+  anosexp: string,
 }
 
 export interface ProjetoProps {
   nome: string;
   tecnologias?: string[];
-  linkGithub: string;
-  linkDemo: string;
+  linkgithub: string;
+  linkdemo: string;
   descricao: string;
   imageurl: string;
   havelinkdemo: boolean;

@@ -44,7 +44,7 @@ export function RoadmapTecnologias({ tecnologias }: { tecnologias: TecnologiaPro
                 boxShadow: 'none'
               }}
               contentArrowStyle={{ borderRight: '7px solid  var(--corSetaElementoRoadmap)' }}
-              date={tecnologia.anosExp}
+              date={tecnologia.anosexp}
               textClassName='vertical-timeline-element-texts'
               iconStyle={{
                 background: 'var(--corFundoInteriorCirculo)',

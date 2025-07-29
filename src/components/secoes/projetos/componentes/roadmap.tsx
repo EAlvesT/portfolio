@@ -10,6 +10,7 @@ import { ProjetoProps } from '@/types/props';
 import Image from 'next/image';
 
 export function RoadmapProjetos({ projetos }: { projetos: ProjetoProps[] }) {
+  console.log(projetos[0].linkdemo)
   return (
     <div>
       <VerticalTimeline
@@ -53,12 +54,12 @@ export function RoadmapProjetos({ projetos }: { projetos: ProjetoProps[] }) {
                 </p>
                 <div className={styles.botoes}>
                   {projeto.havelinkdemo && (
-                    <a href={projeto.linkDemo} target='_blank' rel="noopener noreferrer">
+                    <a href={projeto.linkdemo} target='_blank' rel="noopener noreferrer">
                       <button type='button'>Visitar</button>
                     </a>
                   )}
                   {projeto.havelinkgithub && (
-                    <a href={projeto.linkGithub} target='_blank' rel="noopener noreferrer">
+                    <a href={projeto.linkgithub} target='_blank' rel="noopener noreferrer">
                       <button type='button'>Repositório</button>
                     </a>
                   )}
