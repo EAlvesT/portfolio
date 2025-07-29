@@ -1,0 +1,50 @@
+.contato {
+  width: 100%;
+  margin: 1.6rem 0;
+  padding: 1.2rem 0;
+  // height: 100vh;
+}
+
+.centerContent {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1.4rem;
+
+  h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 1.2rem;
+  }
+
+  .textoContato {
+    max-width: 95%;
+    font-size: 2.1rem;
+    text-align: left;
+  }
+}
+
+@media (min-width: 768px) {
+  .contato {
+    padding: 4.4rem 0;
+    margin: 4.5rem 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .centerContent {
+    padding: 0 2.4rem;
+    height: auto;
+    flex-direction: row;
+    justify-content: space-between;
+
+    .textoContato {
+      max-width: 60%;
+      font-size: 2.4rem;
+      line-height: 4.7rem;
+    }
+  }
+}

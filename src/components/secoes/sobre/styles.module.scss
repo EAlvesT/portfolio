@@ -1,0 +1,112 @@
+.sobre {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: var(--fundoSobre);
+  padding: 1.5rem 0;
+  margin: 1.5rem 0;
+
+  h1 {
+    text-align: center;
+    font-size: 1.8rem;
+  }
+}
+
+.content {
+  width: 100%;
+  padding: 1rem 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.roadmap {
+  width: calc(50% - 1rem);
+  display: none;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  gap: 1rem;
+  height: 100%;
+}
+
+.camposRoadmap {
+  position: relative;
+  width: 70%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+
+  &::after {
+    content: "";
+    position: absolute;
+    width: 2px;
+    height: 70%;
+    top: 0;
+    left: -1.9rem;
+    background-color: var(--corPrimaria);
+  }
+
+  &::before {
+    content: "";
+    position: absolute;
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    bottom: 0;
+    left: -2.2rem;
+    background-color: var(--corPrimaria);
+  }
+
+  &:last-child {
+    &::before {
+      display: none;
+    }
+  }
+}
+
+.texto {
+  width: 70%;
+  text-align: start;
+}
+
+.icon {
+  width: 64px;
+  height: 64px;
+  color: var(--foreground)
+}
+
+.textos {
+  width: 85%;
+  text-align: center;
+  height: 100%;
+
+  h1 {
+    font-size: 2.2rem;
+    font-weight: 700;
+    margin-bottom: 1rem;
+  }
+}
+
+@media (min-width: 768px) {
+  .content {
+    height: 300px;
+  }
+
+  .roadmap {
+    display: flex;
+  }
+
+  .textos {
+    text-align: start;
+    height: 100%;
+    width: calc(50% - 1rem);
+
+    h1 {
+      text-align: start;
+    }
+  }
+}

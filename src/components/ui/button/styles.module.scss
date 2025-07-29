@@ -1,0 +1,22 @@
+.primary {
+  padding: 7px 12px;
+  font-size: 1rem;
+  background-color: var(--corPrimaria);
+  color: var(--foreground);
+  border: 2px solid var(--corPrimaria);
+}
+
+.outline {
+  padding: 7px 12px;
+  font-size: 1rem;
+  border: 2px solid var(--corPrimaria);
+  color: var(--foreground);
+}
+
+@media (min-width: 768px) {
+
+  .primary,
+  .outline {
+    padding: 10px 15px;
+  }
+}
