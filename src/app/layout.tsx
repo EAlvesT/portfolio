@@ -28,7 +28,7 @@ export const metadata: Metadata = {
       "max-video-preview": "large",
     }
   },
-  // metadataBase: new URL("https://meusite.com.br"),
+  metadataBase: new URL(`${process.env.BASE_URL || "http://localhost:3000"}`),
   openGraph: {
     title: "Eduardo Alves",
     description: "Seja bem vindo ao meu portfolio de desenvolvimento web.",
@@ -49,7 +49,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "Eduardo Alves | Desenvolvedor Web",
     description: "Seja bem vindo ao meu portfolio de desenvolvimento web.",
-    // creator: "@seu_usuario_twitter",
+    creator: `${process.env.USER_TWITTER || ""}`,
     images: ["https://res.cloudinary.com/dr3cwzamj/image/upload/v1753814049/fundo_oipjon.png"]
   },
   icons: {
@@ -58,7 +58,7 @@ export const metadata: Metadata = {
     apple: "/apple-touch-icon.png",
   },
   authors: [
-    { name: "Eduardo Alves", url: "https://meusite.com.br" },
+    { name: "Eduardo Alves", url: `${process.env.BASE_URL || "http://localhost:3000"}` },
   ],
   creator: "Eduardo Alves",
   publisher: "Eduardo Alves",
