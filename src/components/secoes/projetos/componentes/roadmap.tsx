@@ -10,7 +10,6 @@ import { ProjetoProps } from '@/types/props';
 import Image from 'next/image';
 
 export function RoadmapProjetos({ projetos }: { projetos: ProjetoProps[] }) {
-  console.log(projetos[0].linkdemo)
   return (
     <div>
       <VerticalTimeline
