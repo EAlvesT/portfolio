@@ -42,7 +42,7 @@ export function RoadmapProjetos({ projetos }: { projetos: ProjetoProps[] }) {
                 <div className={styles.verticalTimelineElementDivImage}>
                   <Image
                     alt='Imagem do projeto Barra Pneus'
-                    src="https://barrapneus.com.br/img-logo.png"
+                    src={projeto.imageurl}
                     quality={100}
                     priority
                     fill
