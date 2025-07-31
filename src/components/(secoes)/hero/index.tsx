@@ -11,8 +11,9 @@ interface HeroProps {
     },
     botaocontatotitle: string;
     botaocontatopath: string;
-    title: string,
+    title: string;
     carreira: string;
+    curriculourl: string;
   };
 }
 
@@ -32,7 +33,7 @@ export function Hero({ dadosHero }: HeroProps) {
                 </a>
               </Botao>
               <Botao variants='outline'>
-                <a href='https://dl.dropboxusercontent.com/scl/fi/qpj1rru82qnis2cb5hg32/Curr-culo-Eduardo.pdf?rlkey=rs93vdpyr1rwzzd2mt7dz3k95&st=6fu0oila&dl=0' download="Currículo Eduardo.pdf">
+                <a href={`${dadosHero.curriculourl}`} download="Currículo Eduardo.pdf">
                   Meu currículo
                 </a>
               </Botao>

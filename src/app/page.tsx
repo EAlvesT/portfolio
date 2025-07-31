@@ -1,10 +1,10 @@
 import { Footer } from "@/components/footer";
 import { Header } from "@/components/header"
-import { Contato } from "@/components/secoes/contato";
-import { Hero } from "@/components/secoes/hero";
-import { Projetos } from "@/components/secoes/projetos";
-import { Sobre } from "@/components/secoes/sobre";
-import { Tecnologias } from "@/components/secoes/tecnologias";
+import { Contato } from "@/components/(secoes)/contato"
+import { Hero } from "@/components/(secoes)/hero";
+import { Projetos } from "@/components/(secoes)/projetos";
+import { Sobre } from "@/components/(secoes)/sobre";
+import { Tecnologias } from "@/components/(secoes)/tecnologias";
 import { getPageData } from "@/lib/getPageData";
 import { DadosProps } from "@/types/props";
 
@@ -27,12 +27,13 @@ export async function generateMetadata() {
 export const revalidate = 120;
 
 export default async function Home() {
-  const { object } = await getData();
+  const { object } = await getData() as DadosProps;
 
   const dadosHero = {
     ...object.metadata.hero,
     title: object.title,
-    carreira: object.metadata.carreira
+    carreira: object.metadata.carreira,
+    curriculourl: object.metadata.curriculourl,
   }
 
   return (

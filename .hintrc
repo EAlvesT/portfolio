@@ -9,6 +9,7 @@
       {
         "role-img-alt": "off"
       }
-    ]
+    ],
+    "typescript-config/consistent-casing": "off"
   }
 }

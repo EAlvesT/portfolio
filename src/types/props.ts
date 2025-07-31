@@ -41,7 +41,8 @@ export interface DadosProps {
       },
       tecnologias: TecnologiaProps[],
       projetos: ProjetoProps[],
-      textoform: string
+      textoform: string,
+      curriculourl: string,
     }
   }
 }
