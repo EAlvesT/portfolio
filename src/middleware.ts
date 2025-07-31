@@ -8,6 +8,10 @@ const validPaths = [
 export function middleware(req: NextRequest) {
   const pathname = req.nextUrl.pathname;
 
+  if (pathname === "/_not-found") {
+    return NextResponse.redirect(new URL("/", req.url));
+  }
+
   if (!validPaths.includes(pathname)) {
     return NextResponse.redirect(new URL("/", req.url));
   }
