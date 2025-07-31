@@ -15,7 +15,6 @@ export function Contato({ textoform }: ContatoProps) {
           <p className={styles.textoContato}>{textoform}</p>
 
           <ContatoForm />
-
         </div>
       </Container>
     </section>
