@@ -17,6 +17,13 @@ export interface ProjetoProps {
   havelinkgithub: boolean;
 }
 
+export interface HeaderProps {
+  nome: string;
+  path: string;
+  icon: "FaLinkedin" | "FaGithub";
+  titulo: string;
+}
+
 export interface DadosProps {
   object: {
     title: string,
@@ -43,6 +50,7 @@ export interface DadosProps {
       projetos: ProjetoProps[],
       textoform: string,
       curriculourl: string,
+      header: HeaderProps[]
     }
   }
 }

@@ -29,6 +29,11 @@ export const revalidate = 120;
 export default async function Home() {
   const { object } = await getData() as DadosProps;
 
+  const dadosHeader = {
+    title: object.title,
+    links: object.metadata.header
+  }
+
   const dadosHero = {
     ...object.metadata.hero,
     title: object.title,
@@ -38,7 +43,7 @@ export default async function Home() {
 
   return (
     <>
-      <Header title={object.title} />
+      <Header dadosHeader={dadosHeader} />
       <Hero dadosHero={dadosHero} />
       <Sobre sobre={object.metadata.sobre} />
       <Tecnologias tecnologias={object.metadata.tecnologias} />

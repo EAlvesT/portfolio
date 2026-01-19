@@ -9,10 +9,10 @@ const nextConfig: NextConfig = {
     return config
   },
   images: {
-    domains: [
-      'barrapneus.com.br',
-      'imgix.cosmicjs.com',
-      'res.cloudinary.com',
+    remotePatterns: [
+      { protocol: 'https', hostname: 'res.cloudinary.com' },
+      { protocol: 'https', hostname: 'imgix.cosmicjs.com' },
+      { protocol: 'https', hostname: 'barrapneus.com.br' },
     ]
   }
 };
