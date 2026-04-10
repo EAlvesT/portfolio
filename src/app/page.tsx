@@ -7,18 +7,14 @@ import { Sobre } from "@/components/(secoes)/sobre";
 import { Tecnologias } from "@/components/(secoes)/tecnologias";
 import { getPageData } from "@/lib/getPageData";
 import { DadosProps } from "@/types/props";
+import { cache } from "react";
 
-let cachedData: any;
-
-async function getData() {
-  if (!cachedData) {
-    cachedData = await getPageData();
-  }
-  return cachedData;
-}
+const getSharedData = cache(async () => {
+  return await getPageData();
+})
 
 export async function generateMetadata() {
-  const { object } = await getData() as DadosProps;
+  const { object } = await getSharedData() as DadosProps;
   return {
     title: `${object.title} | ${object.metadata.carreira}`
   }
@@ -27,7 +23,7 @@ export async function generateMetadata() {
 export const revalidate = 120;
 
 export default async function Home() {
-  const { object } = await getData() as DadosProps;
+  const { object } = await getSharedData() as DadosProps;
 
   const dadosHeader = {
     title: object.title,
